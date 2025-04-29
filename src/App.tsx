@@ -67,7 +67,12 @@ useEffect(() => {
 
 const startWorkTimer = () => {
   // setWorkTimeLeft(workMinutes * 60);
-  setWorkIsRunning(true);
+  if (workMinutes == 0) {
+    alert('Please select time limit from list.');
+  }
+  else {
+    setWorkIsRunning(true);
+  }
 };
 
 const pauseWorkTimer = () => {
@@ -93,7 +98,12 @@ useEffect(() => {
 
 const startBreakTimer = () => {
   // setBreakTimeLeft(workMinutes * 60);
-  setBreakIsRunning(true);
+  if (breakMinutes == 0) {
+    alert('Please select time limit from list.');
+  }
+  else {
+    setBreakIsRunning(true);
+  }
 };
 
 const pauseBreakTimer = () => {
